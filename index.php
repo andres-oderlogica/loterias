@@ -1,3 +1,3 @@
 <?php
-header("Location: bin/modules/usuario/nuevo_usuario.php");
+header("Location: bin/modules/inicio/inicio.php");
 ?>
