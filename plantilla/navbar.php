@@ -24,8 +24,8 @@
         if($_SESSION['perfil'] == 'Administrador')
         {
         ?>
-       	<li class="<?php echo $active_clientes;?>"><a href="../clientes/registro_clientes.php"> Clientes</a></li>
-    		<li class="<?php echo $active_usuarios;?>"><a href="../usuarios/usuarios.php">Usuarios</a></li>
+       	<li class="<?php echo $active_clientes;?>"><a href="../loteria/loteria.php"> Registra Loteria</a></li>
+    		<li class="<?php echo $active_usuarios;?>"><a href="../numeros/numeros.php">Registrar Numeros</a></li>
 
         <?php
         }
