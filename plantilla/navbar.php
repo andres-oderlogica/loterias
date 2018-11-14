@@ -26,6 +26,7 @@
         ?>
        	<li class="<?php echo $active_clientes;?>"><a href="../loteria/loteria.php"> Registra Loteria</a></li>
     		<li class="<?php echo $active_usuarios;?>"><a href="../numeros/numeros.php">Registrar Numeros</a></li>
+        <li class="<?php echo $active_usuarios;?>"><a href="../graficas/reporte_grafico_solicitudes.php">Reportes</a></li>
 
         <?php
         }

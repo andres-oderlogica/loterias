@@ -8,15 +8,21 @@
         <div class="modal-header"> 
  
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Descripcion Estado Solicitud</h4>
+          <h4 class="modal-title" id="myModalLabel"><i class='glyphicon glyphicon-edit'></i> Editar Numeros</h4>
 <br>
 <div class="bootstrap-iso">
  <div class="container-fluid">
   <div class="row">   
      <div class="form-group ">
-      <label for="descripcion_estado">Descripcion Solicitud</label>
-          <input class="form-control" type ="text" id="descripcion" name="descripcion"><br>   
+      <label for="descripcion_estado">Numero</label>
+          <input class="form-control" type ="text" id="mod_numero" name="mod_numero"><br>   
           <input type="hidden" id="id">                       
+     </div>
+
+     <div class="form-group ">
+      <label for="descripcion_estado">Fecha</label>
+          <input class="form-control" type ="date" id="mod_fecha" name="mod_fecha"><br>   
+                                
      </div>
 
         <div class="modal-footer">         

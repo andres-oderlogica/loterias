@@ -98,17 +98,18 @@ public function listNumero()
 
 public function eliminar($id)
 {
-    $reg              = new Loteria('loteria');
-    $reg->load("id_loteria = {$id}");
+    $reg              = new Numero('numeros_loteria');
+    $reg->load("id_numeros = {$id}");
     $reg->Delete();
 }
 
 
-  public function editar($id,$desc)
+  public function editar($id,$numero,$fecha)
     {
-        $reg              = new Loteria('loteria');
-        $reg->load("id_loteria = {$id}");
-        $reg->descripcion      = $desc;
+        $reg              = new Numero('numeros_loteria');
+        $reg->load("id_numeros = {$id}");
+        $reg->numero      = $numero;
+        $reg->fecha      = $fecha;
         $reg->Save();
         //return $reg->id_grado;
     }
@@ -117,19 +118,21 @@ public function eliminar($id)
   {
     $db = App::$base;
         $sql = "SELECT 
-                  id_loteria,
-                  descripcion
+                  id_numeros,
+                  numero,
+                  fecha
                 FROM
-                  `loteria`
-                WHERE id_loteria = ?";
+                  `numeros_loteria`
+                WHERE id_numeros = ?";
                     $rs = $db->dosql($sql, array($id));
 
     while (!$rs->EOF) 
                    {
 
                     $res = array( 
-                      "id_loteria" => $rs->fields['id_loteria'],
-                     "descripcion" => $rs->fields['descripcion']
+                      "id_numeros" => $rs->fields['id_numeros'],
+                     "numero" => $rs->fields['numero'],
+                     "fecha" => $rs->fields['fecha']
                       );
 
                     $rs->MoveNext();      

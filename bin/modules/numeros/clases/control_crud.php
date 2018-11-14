@@ -1,11 +1,12 @@
 <?php
-include_once 'class_loteria.php';
+include_once 'class_numeros.php';
 $opcion = $_POST['opcion'];
 $id     = $_POST['id'];
 $idel     = $_POST['idel'];
-$descripcion   = $_POST['descripcion'];
+$numero   = $_POST['numero'];
+$fecha	=$_POST['fecha'];
 
-$disc   = new regLoteria();
+$disc   = new regNumeros();
 //var_dump($estado);
 switch ($opcion) {
 	case '1':
@@ -16,7 +17,7 @@ switch ($opcion) {
 		echo json_encode($res);		
 		break;
 		case '3':
-			$disc->editar($id,$descripcion);
+			$disc->editar($id,$numero,$fecha);
 			break;
 	default:
 		# code...

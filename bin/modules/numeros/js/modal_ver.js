@@ -9,12 +9,13 @@ $("#btn_save").click(function(){
     dataType: "json",
     data: {opcion:"3",
     id:$('#id').val(),
-    descripcion:$('#descripcion').val()
+    fecha:$('#mod_fecha').val(),
+    numero:$('#mod_numero').val()
     },
           })
       .done(function() {     
       $('#id').val(""),
-      $('#descripcion').val("")     
+      $('#mod_fecha').val("")     
              })
       .always(function(){
         $('#myModal').modal('toggle');

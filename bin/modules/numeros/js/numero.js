@@ -112,8 +112,9 @@ function editar(id)
           })
       .done(function(data) {
       //console.log(data) 
-    $("#descripcion").val(data.descripcion);
-    $("#id").val(id);    
+    $("#mod_numero").val(data.numero);
+    $("#id").val(id);  
+    $("#mod_fecha").val(data.fecha);
             
     });    
 

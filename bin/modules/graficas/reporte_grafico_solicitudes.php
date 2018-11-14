@@ -28,9 +28,17 @@ session_start();
     <script src="../../../lib/js/jquery.dataTables.min.js?v=<?php echo str_replace('.', '', microtime(true)); ?>"></script>
     <script src='../../../lib/data_table.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
     
-     <script src='js/filtros_reporte.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
+      <script src='js/reporte_grafico_solicitudes.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
       <script src='js/modal_ver.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
       <link href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+      <!-- <script src="../../../lib/code/js/highcharts.js"></script>
+      
+      <script src="../../../lib/code/modules/data.js"></script>
+<script src="../../../lib/code/modules/drilldown.js"></script> -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="../../../lib/code/modules/exporting.js"></script>
      <style>
              #pre-load-web {
                 width:100%;
@@ -71,50 +79,51 @@ session_start();
   include("../../../plantilla/navbar.php"); //var_dump($_SESSION['user_id']) ;
   ?>  
 <div class="container-fluid">
-             <div class="col-md-4">
+
+     <div class="col-md-12">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><h5>Filtros para reporte</h5></div>
+                   <div class="panel-heading"><h5>Criterios</h5></div>
                     <div class="panel-body">
-                           <div class="col-md-12">
-                              <label for="tipo">Elija el estado:</label>
-                               <select id="estados" name="estados" class="form-control">                                
-                               </select>                        
-                            </div>  
-                            <div class="col-md-12">
-                              <label for="tipo">Entre:</label>
-                               <input class="form-control" type="date" name="fecha_inicial" id="fecha_inicial">                      
-                            </div>
-                            <div class="col-md-12">
-                              <label for="tipo">y:</label>
-                               <input class="form-control" type="date" name="fecha_final" id="fecha_final">   <br>                   
-                            </div>
-                                                                                            
-                            <div class="col-md-2">
-                                <button type="button" class="btn btn-success" id="b_reporte"><i class="glyphicon glyphicon-floppy-disk"></i> Conultar Datos</button>
-                            </div>
-                        
+                      <div class="col-md-4">
+                      <label for="tipo">Entre:</label>
+                          <input class="form-control" type="date" name="fecha_inicial" id="fecha_inicial"> 
                     </div>
-                  
+
+                    <div class="col-md-4">
+                      <label for="tipo">y:</label>
+                          <input class="form-control" type="date" name="fecha_final" id="fecha_final">
+                   </div>
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-success" id="datos_solicitudes"><i class="glyphicon glyphicon-floppy-disk"></i> Consultar Datos</button>
+                    </div>
+                </div>
+            </div>
+      </div>
+
+            <div class="col-md-12">
+                <div class="panel panel-primary">
+                   <div class="panel-heading"><h5>Graficas</h5></div>
+                    <div class="panel-body">
+                        <div class="col-md-8 graficas_solicitudes">
+                          <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+                
+                          </div>
+                        </div>
+                      <div class="col-md-2">
+                      </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-8">
-                <div class="panel panel-primary">
-                    <div class="panel-heading"><h5>PDF</h5></div>
-                    <div class="panel-body">
-                      <div class="row">
-                     <div class="col-md-12" id="reporte">
 
-                    </div>
-                    
-                  </div>
-                           
-                        
-                    </div>                  
-                </div>
-            </div>
-               
 </div>
+ 
+
+
+
+ 
+               
+
 
 
   <?php
