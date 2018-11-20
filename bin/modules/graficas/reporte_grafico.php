@@ -29,7 +29,7 @@ session_start();
     <script src='../../../lib/data_table.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
     
      <script src='js/filtros_reporte.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
-     <script src='js/reporte_grafico.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
+     <script src='js/reporte.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
       <script src='js/modal_ver.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
       <link href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
       <!-- <script src="../../../lib/code/js/highcharts.js"></script>
@@ -79,6 +79,26 @@ session_start();
   include("../../../plantilla/navbar.php"); //var_dump($_SESSION['user_id']) ;
   ?>  
 <div class="container-fluid">
+  <div class="col-md-12">
+                <div class="panel panel-primary">
+                   <div class="panel-heading"><h5>Criterios</h5></div>
+                    <div class="panel-body">
+                      <div class="col-md-4">
+                      <label for="tipo">Entre:</label>
+                          <input class="form-control" type="date" name="fecha_inicial" id="fecha_inicial"> 
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="tipo">y:</label>
+                          <input class="form-control" type="date" name="fecha_final" id="fecha_final">
+                   </div>
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-success" id="datos_numeros"><i class="glyphicon glyphicon-floppy-disk"></i> Consultar Datos</button>
+                    </div>
+                </div>
+            </div>
+      </div>
+
             <div class="col-md-2">
             </div>
             <div class="col-md-8 graficas">

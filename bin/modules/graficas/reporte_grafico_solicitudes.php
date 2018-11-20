@@ -28,7 +28,7 @@ session_start();
     <script src="../../../lib/js/jquery.dataTables.min.js?v=<?php echo str_replace('.', '', microtime(true)); ?>"></script>
     <script src='../../../lib/data_table.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
     
-      <script src='js/reporte_grafico_solicitudes.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
+      <script src='js/reporte.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
       <script src='js/modal_ver.js?v=<?php echo str_replace('.', '', microtime(true)); ?>'></script>
       <link href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
       <!-- <script src="../../../lib/code/js/highcharts.js"></script>
@@ -38,7 +38,7 @@ session_start();
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
 <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="../../../lib/code/modules/exporting.js"></script>
+<!-- <script src="../../../lib/code/modules/exporting.js"></script> -->
      <style>
              #pre-load-web {
                 width:100%;
@@ -94,7 +94,7 @@ session_start();
                           <input class="form-control" type="date" name="fecha_final" id="fecha_final">
                    </div>
                     <div class="col-md-4">
-                      <button type="button" class="btn btn-success" id="datos_solicitudes"><i class="glyphicon glyphicon-floppy-disk"></i> Consultar Datos</button>
+                      <button type="button" class="btn btn-success" id="datos_numeros"><i class="glyphicon glyphicon-floppy-disk"></i> Consultar Datos</button>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ session_start();
                    <div class="panel-heading"><h5>Graficas</h5></div>
                     <div class="panel-body">
                         <div class="col-md-8 graficas_solicitudes">
-                          <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+                          <div id="container" >
                 
                           </div>
                         </div>
