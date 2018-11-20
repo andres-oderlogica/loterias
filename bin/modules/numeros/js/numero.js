@@ -68,6 +68,7 @@ $('#form_numeros').submit(function (e)
                                  $('#id_loteria').val("")                     
                                  $('#numero').val("")
                                  $('#fecha').val("")
+                                 $('#comboLoteria').val("")
                                 
                                 })
                 
